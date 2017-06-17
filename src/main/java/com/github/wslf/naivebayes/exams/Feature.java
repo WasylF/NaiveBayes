@@ -38,8 +38,8 @@ public class Feature extends com.github.wslf.naivebayes.Feature implements Compa
             }
         }
         setText(feature.toString());
-
         int importance;
+/*
         switch (num) {
             case 0:
                 importance = 0;
@@ -53,7 +53,9 @@ public class Feature extends com.github.wslf.naivebayes.Feature implements Compa
             default:
                 importance = 1;
         }
-
+        
+*/
+        importance = feature.length() > 1 ? 3 : 0;
         setImportance(importance);
     }
 

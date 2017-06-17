@@ -120,7 +120,7 @@ public class ExamClassifier implements NaiveBayes {
     }
 
     private ArrayList<Feature> parseFeatures(String text) {
-        String[] parts = text.split("\\.|\\,|\\!|\\?|\\;| ");
+        String[] parts = text.split("\\.|\\,|\\!|\\?|\\;|\\s");
         ArrayList<Feature> features = new ArrayList<>(parts.length);
         for (String part : parts) {
             Feature feature = new Feature(part);
